@@ -11,14 +11,35 @@
 <br>
 <h3 id="display"></h3>
 <script>
-    let n =+document.getElementById('input').value;
     function calculate() {
+        let n = +document.getElementById('input').value;
         if (Number.isInteger(n) && (n > 0)) {
             //n là số nguyên => giải bài toán tiếp
-            let type1 =1678
-            if (0<=n && n<=100){
-
+            let type1 = 1678;
+            let type2 = 1734;
+            let type3 = 2014;
+            let type4 = 2536;
+            let type5 = 2834;
+            let type6 = 2927;
+            let money;
+            if (0 <= n && n <= 100) {
+                money = type1 * n;
+            } else if (101 <= n && n <= 200) {
+                money = type2 * n;
             }
+            else if (201<= n && n <= 300){
+                money = type3 * n;
+            }
+            else if (301<= n && n<=400){
+                money = type4 *n;
+            }
+            else if (401<= n && n <=500){
+                money = type5 * n;
+            }
+            else {
+                money = type6 *n;
+            }
+            document.getElementById('display').innerHTML = 'Số tiền điện là: '+ money + 'VND';
 
         } else {
             alert('Yêu cầu nhập lại');
