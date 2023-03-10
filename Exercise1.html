@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise1</title>
+</head>
+<body>
+<h2>Kiểm tra mật độ dân số</h2>
+<h3>
+    <input type="number" placeholder="Số dân trong một khu vực" id="n"><br>
+    <input type="number" placeholder="Diện tích khu vực" id="m"><br>
+    <button type="button" onclick="checkMDDS()">Kiểm tra</button>
+    <br>
+    <br>
+    <b id="display"></b>
+</h3>
+<script>
+    function checkMDDS() {
+        let n = +document.getElementById('n').value;
+        let m = +document.getElementById('m').value;
+        if (Number.isInteger(n) && Number.isInteger(m) && (n > 0) && (m > 0)) {
+            let density = n * m;
+            if (density > 1000) {
+                document.getElementById('display').innerHTML = 'Khu vực đông đúc'
+            } else {
+                document.getElementById('display').innerHTML = 'Khu vực không đông đúc'
+            }
+        } else {
+            document.getElementById('display').innerHTML = 'Vui lòng nhập lại'
+        }
+    }
+</script>
+</body>
+</html>
