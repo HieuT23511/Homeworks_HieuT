@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise2</title>
+</head>
+<body>
+<h2>Chương trình tính số điện phải trả</h2>
+<input type="number" id="input" placeholder="Nhập vào số điện">
+<button type="button" id="money" onclick="calculate()">Calculate</button>
+<br>
+<h3 id="display"></h3>
+<script>
+    let n =+document.getElementById('input').value;
+    function calculate() {
+        if (Number.isInteger(n) && (n > 0)) {
+            //n là số nguyên => giải bài toán tiếp
+            let type1 =1678
+            if (0<=n && n<=100){
+
+            }
+
+        } else {
+            alert('Yêu cầu nhập lại');
+            // document.getElementById('display').innerHTML = 'Yêu cầu nhập lại'
+        }
+    }
+
+</script>
+</body>
+</html>
