@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise4</title>
+</head>
+<body>
+<script>
+    let a = +(prompt("Nhập độ dài cạnh a: "));
+    let b = +(prompt("Nhập độ dài cạnh b: "));
+    let c = +(prompt("Nhập độ dài cạnh c: "));
+    if (a + b > c && b + c > a && c + a > b) {
+        if (a === b && b === c) {
+            alert("Đây là tam giác đều.");
+        } else if (a === b || b === c || c === a) {
+            alert("Đây là tam giác cân.");
+        } else if (
+            a * a + b * b === c * c ||
+            b * b + c * c === a * a ||
+            c * c + a * a === b * b
+        ) {
+            alert("Đây là tam giác vuông.");
+        } else {
+            alert("Đây là tam giác thường.");
+        }
+    } else {
+        alert("3 số này không phải là độ dài của 3 cạnh của một tam giác.");
+    }
+</script>
+</body>
+</html>
