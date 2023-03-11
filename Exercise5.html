@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 3</title>
+</head>
+<body>
+<h2>Giải phương trình bậc hai</h2>
+<input type="number" id="a"> *x <sup>2</sup> +
+<input type="number" id="b"> *x +
+<input type="number" id="c"> =0 <br> <br>
+<button type="button" id="calculate" onclick="calculate()">Calculate</button>
+<br>
+<b id="display"></b>
+<script>
+    function calculate() {
+        let a = +document.getElementById('a').value;
+        let b = +document.getElementById('b').value;
+        let c = +document.getElementById('c').value;
+        if (Number.isInteger(a) && Number.isInteger(b) && Number.isInteger(c)) {
+            //Nhap cach giai phuong trinh bac 2
+            if (a === 0) {
+                let x = (-c) / b;
+                document.getElementById('display').innerHTML = 'Phương trình có nghiệm x = ' + x;
+            } else {
+                let delta = b * b - 4 * a * c;
+                if (delta < 0) {
+                    document.getElementById('display').innerHTML = 'Phương trình vô nghiệm';
+                } else if (delta === 0) {
+                    let x = -b / (2 * a);
+                    document.getElementById('display').innerHTML = 'Phương trình có nghiệm kép x = ' + x;
+                } else {
+                    let x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                    let x2 = (-b - Math.sqrt(delta)) / (2 * a);
+                    document.getElementById('display').innerHTML = "Phương trình có 2 nghiệm phân biệt: x1 = " + x1 + " và x2 = " + x2;
+                }
+            }
+        } else {
+            alert('Vui lòng nhập các số nguyên');
+        }
+    }
+</script>
+</body>
+</html>
